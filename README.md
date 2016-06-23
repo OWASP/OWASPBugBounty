@@ -9,7 +9,7 @@ Researchers can downlaod and run locally this applications in order to test thei
 Explanation regaridng each bounty scope please visit each project page at BugCrowd Bounty Source pages here.
 
 ##Bug Hunters
-Check the following Bounty Programs
+Check the following Bounty Programs<br>
 Running:
 -OWASP ZAP : https://bugcrowd.com/owaspzap
 Coming Soon:
