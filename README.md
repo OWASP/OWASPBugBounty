@@ -15,7 +15,7 @@ Check the following Bounty Programs
 *OWASP CRSFGuard: https://bugcrowd.com/owaspjavasanitizer
 
 #Issues
-If you are having issues running the application , please report your problem as an issue 
+If you are having issues running the application ,please report your problem as an issue 
 
 ##FAQ
 
