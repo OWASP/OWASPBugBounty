@@ -6,7 +6,7 @@ Many developers and companies looking to implement security are turning towards 
 ##Repository
 This repository contains web applications protected by OWASP projects that are running a Bug Bounty.
 Researchers can download and run locally these applications in order to test their security.
-Explanation regaridng each bounty scope please visit each project page at BugCrowd Bounty Source pages here:
+Explanation regarding each bounty scope please visit each project page at BugCrowd Bounty Source pages here:
 ####Running at the moment:
 *OWASP ZAP : https://bugcrowd.com/owaspzap
 ####Coming Soon:
