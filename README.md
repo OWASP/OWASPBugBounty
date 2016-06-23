@@ -4,13 +4,15 @@
 Many developers and companies looking to implement security are turning towards OWASP to use Defender libraries that they can implement to secure their critical applications. Since this implies a form of trust in OWASP, many users of these projects might forget or not be aware that many of them are Open Source and lack an expected security assurance review, which at the moment is not done by OWASP.
 
 ##Repository
-This reporsitory contains web applications protected by OWASP projects that are running a Bug Bounty.
-REserachers can downlaod and run locally this applications in order to test their security
+This repository contains web applications protected by OWASP projects that are running a Bug Bounty.
+Researchers can downlaod and run locally this applications in order to test their security.
 Explanation regaridng each bounty scope please visit each project page at BugCrowd Bounty Source pages here.
 
 ##Bug Hunters
 Check the following Bounty Programs
 *OWASP ZAP : https://bugcrowd.com/owaspzap
+*OWASP Java HTML Sanitizer: https://bugcrowd.com/owaspjavasanitizer?preview=00a750fda36e488832bff79e4220c2c6
+*OWASP CRSFGuard: https://bugcrowd.com/owaspjavasanitizer
 
 #Issues
 If you are having issues running the application , please report your problem as an issue 
