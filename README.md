@@ -10,8 +10,9 @@ Explanation regaridng each bounty scope please visit each project page at BugCro
 
 ##Bug Hunters
 Check the following Bounty Programs<br>
-Running:
+Running at the mooment:
 -OWASP ZAP : https://bugcrowd.com/owaspzap
+
 Coming Soon:
 -OWASP Java HTML Sanitizer: https://bugcrowd.com/owaspjavasanitizer?preview=00a750fda36e488832bff79e4220c2c6
 -OWASP CRSFGuard: https://bugcrowd.com/owaspcrsfguard?preview=db24e118ea34e13a78677ea8374f790c05cbd08ef4f0ddcf
