@@ -6,5 +6,6 @@ This library protect agains XSS attacks. For more info about the project please 
 
 ###Scope
 Researchers please refer to BugCrowd bounty page to read about the scope of this bounty:
+*OWASP Java HTML Sanitizer: https://bugcrowd.com/owaspjavasanitizer?preview=00a750fda36e488832bff79e4220c2c6
 
 
