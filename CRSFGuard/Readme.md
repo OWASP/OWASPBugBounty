@@ -1,4 +1,4 @@
-Apache-Shiro-CRSFGuard
+CRSFGuard Bounty
 ============================
 
 This is a version of Apache Shiro web application using OWASP CRSFGuard to protect forms and Post request with a unique token
