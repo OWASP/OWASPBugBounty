@@ -1,7 +1,7 @@
 #OWASP Java HTML Sanitizer Bug Bounty
 
 This simple web application is hosting single webform  protected by the OWASP Java HTML Sanitizer.
-This library protect agains XSS attacks. For more info about the project please visit:
+This library protects agains XSS attacks. For more info about the project please visit:
 
 
 ###Scope
