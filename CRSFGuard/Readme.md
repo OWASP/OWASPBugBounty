@@ -3,7 +3,7 @@ CRSFGuard Bounty
 
 This is a version of Apache Shiro web application using OWASP CRSFGuard to protect forms and Post request with a unique token
 
-#Bounty
+#Bounty Researchers read here:
 Bug Hunters please visit BugCrowd page for the scope:
 *OWASPCRSFGuard:https://bugcrowd.com/owaspcrsfguard?preview=db24e118ea34e13a78677ea8374f790c05cbd08ef4f0ddcf
 
