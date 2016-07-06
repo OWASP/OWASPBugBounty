@@ -18,6 +18,8 @@ Build id: 20150621-1200
 Using Eclipse Jetty 3.9.0
 Available through the marketplace
 
+or simply by running from command line : mvn jetty:run
+
 ##Instructions
 The web app is using Stormpath as OAUTH. In order to run this properly you must obtain a apiKey as instructed in the Apache Shiro Documentation to setup Stormpath:
 http://shiro.apache.org/webapp-tutorial.html#step2
