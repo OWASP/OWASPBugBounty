@@ -25,4 +25,4 @@ This Github repository is hosting the web applications for each project, so you 
 For additional inquiries about the OWASP Bug Bounty program, contact support@bugcrowd.com.
 
 ###Is the Bug Bounty open to all Researchers?
-Yes, just keep in mind that you nee dto be registered as reseracher on the Bugcrowd platform
+Yes, just keep in mind that you need to be registered as reseracher on the Bugcrowd platform.
