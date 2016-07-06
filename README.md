@@ -19,7 +19,7 @@ If you are having issues running the applications,please report your problem as 
 ##FAQ
 
 ###I'm a Bug Hunter, how can I participate?
-Please take contact with BugCrowd as our Bug Bounty is working through their portal.
+Please contact with BugCrowd as our Bug Bounty is working through their portal.
 This Github repository is hosting the web applications for each project, so you can download it and run it into your own ennvironment. If you have issues running the application, please create an issue in this repository.
 
 For additional inquiries about the OWASP Bug Bounty program, contact support@bugcrowd.com.
