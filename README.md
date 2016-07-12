@@ -9,9 +9,8 @@ Researchers can download and run locally these applications in order to test the
 Explanation regarding each bounty scope please visit each project page at BugCrowd Bounty Source pages here:
 ####Running at the moment:
 *OWASP ZAP : https://bugcrowd.com/owaspzap
-####Coming Soon:
-*OWASP Java HTML Sanitizer: https://bugcrowd.com/owaspjavasanitizer?preview=00a750fda36e488832bff79e4220c2c6
-*OWASPCRSFGuard:https://bugcrowd.com/owaspcrsfguard?preview=db24e118ea34e13a78677ea8374f790c05cbd08ef4f0ddcf
+*OWASP Java HTML Sanitizer: https://bugcrowd.com/owaspjavasanitizer
+*OWASPCRSFGuard:https://bugcrowd.com/owaspcrsfguard
 
 #Issues
 If you are having issues running the applications,please report your problem as an issue 
