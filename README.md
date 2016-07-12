@@ -1,3 +1,4 @@
+[![Github All Releases](https://img.shields.io/github/downloads/OWASP/OWASPBugBounty/total.svg?maxAge=2592000)]()
 # OWASP Bug Bounty for Projects
 
 ##Introduction
