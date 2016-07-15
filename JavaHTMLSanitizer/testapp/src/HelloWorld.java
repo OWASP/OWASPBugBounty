@@ -16,20 +16,18 @@ public class HelloWorld extends HttpServlet {
     // reading the user input
 	  
 	org.owasp.html.PolicyFactory sanitizer = Sanitizers.FORMATTING.and(Sanitizers.BLOCKS);
-    String color= request.getParameter(sanitizer.sanitize("color"));    
+    String usercontent = request.getParameter("usercontent");
+    if (usercontent == null) usercontent = ""; //just avoiding nulls
+
     PrintWriter out = response.getWriter();
     out.println (
       "<!DOCTYPE html>"+
       "<html> \n" +
         "<head> \n" +
           "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\"> \n" +
-          "<title> My first jsp  </title> \n" +
+          "<title>Can you XSS the OWASP HTML Sanitizer?</title> \n" +
         "</head> \n" +
-        "<body> \n" +
-          "<font size=\"12px\" color=\"" + color + "\">" +
-            "Hello World" +
-          "</font> \n" +
-        "</body> \n" +
+        "<body>" + sanitizer.sanitize(usercontent) + "</body> \n" +
       "</html>"
     );  
   }  
