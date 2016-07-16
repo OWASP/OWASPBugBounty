@@ -62,7 +62,7 @@ public class HelloWorld extends HttpServlet {
           "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\"> \n" +
           "<title>Can you XSS the OWASP HTML Sanitizer?</title> \n" +
         "</head> \n" +
-        "<body>" + sanitizer.sanitize(usercontent) + "</body> \n" +
+        "<body><h2>Results</h2><br/>" + sanitizer.sanitize(usercontent) + "</body> \n" +
       "</html>"
     );  
   }  
