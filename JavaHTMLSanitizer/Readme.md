@@ -9,6 +9,5 @@ This library protects against XSS attacks using a configurable policy. This test
 
 ##Scope
 Researchers please refer to BugCrowd bounty page to read about the scope of this bounty:
-https://bugcrowd.com/owaspjavasanitizer?preview=00a750fda36e488832bff79e4220c2c6
-
+https://bugcrowd.com/owaspjavasanitizer
 
