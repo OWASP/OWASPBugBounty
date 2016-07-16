@@ -1,16 +1,28 @@
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.PrintWriter;
 
 import org.owasp.html.HtmlPolicyBuilder;
-import org.owasp.html.Sanitizers;
 
 public class HelloWorld extends HttpServlet { 
-  protected void doGet(HttpServletRequest request, 
+
+  /**
+   * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // TODO Auto-generated method stub
+    response.getWriter().append("GET out of here!");
+  }
+
+  /**
+   * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doPost(HttpServletRequest request, 
       HttpServletResponse response) throws ServletException, IOException 
   {
     // building a policy described in https://www.owasp.org/index.php/OWASP_Java_HTML_Sanitizer_Project#tab=Creating_a_HTML_Policy

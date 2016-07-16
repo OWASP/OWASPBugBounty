@@ -7,10 +7,11 @@
 		<title>OWASP Sanitizer Test</title>
 	</head>	
 	<body>		
-		<form action="HelloServlet">			
-			Please enter some HTML and try to XSS the server-side sanitizer! The current server-side policy allows the following tags ("a", "p", "div", "i", "b", "em", "blockquote", "tt", "strong", "br", "ul", "ol", "li") and only certain attributes. Good luck!<br/><br/>
-			<textarea rows="10" cols="100" name="usercontent">
-			</textarea><br/>
+		<form action="HelloServlet" method="POST">			
+			<b>Please enter some HTML and try to XSS the server-side sanitizer!</b><br/><br/>
+			The current server-side policy allows the following tags ("a", "p", "div", "i", "b", "em",<br/>
+			"blockquote", "tt", "strong", "br", "ul", "ol", "li") and only certain attributes.<br/><br/> Good luck!<br/><br/>
+			<textarea rows="10" cols="100" name="usercontent"></textarea><br/>
 			<input type="submit" value="submit">						
 		</form>	
 	</body>	
