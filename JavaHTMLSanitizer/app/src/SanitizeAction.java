@@ -49,6 +49,8 @@ public class SanitizeAction extends HttpServlet {
           // Custom slashdot tags.
           // These could be rewritten in the sanitizer using an ElementPolicy.
           .allowElements("quote", "ecode")
+          // Allows for tests against new CSS sanitization
+          .allowStyling()
           .toFactory();
 
     //accepting user content and converting nulls to empty strings
