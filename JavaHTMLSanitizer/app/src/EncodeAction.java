@@ -43,16 +43,16 @@ protected void doPost(HttpServletRequest request,
 		  "<html><head>\n" + 
 		  "<title>" + Encode.forHtml(title) + "</title>\n" +
 		  "</head>\n" +
-		  "<body>\n" +
+		  "<body><h2>Results (Go back to try again!)</h2><hr><br/>\n" +
 		  "<h1>" + Encode.forHtml(h1) + "</h1>\n" +
 		  "<form>" + 
 		  "<textarea>" + Encode.forHtmlContent(textarea) + "</textarea><br/>\n" +
 		  "<input type=\"text\" name=\"address\" value=\"" + Encode.forHtmlAttribute(attribute) + "\" /><br/>\n" +
 		  "</form>\n" + 	  
-		  "<div style=\"width:" + Encode.forCssString(csswidth) + "\">Style1</div>\n" +
-		  "<div style=\"background:" + Encode.forCssUrl(cssbackground) + "\">Style2</div>\n" + 
+		  "<div style=\"width: " + Encode.forCssString(csswidth) + "; height: 200px; border: 1px solid black;\">Style1</div>\n" +
+		  "<div style=\"background-image: url(" + Encode.forCssUrl(cssbackground) + "); height: 200px; width: 400px; border: 1px solid black;\">Style2</div>\n" + 
 		  "</body>\n" +
 		  "</html>"
-	  );  
+	 );  
   }  
 }
