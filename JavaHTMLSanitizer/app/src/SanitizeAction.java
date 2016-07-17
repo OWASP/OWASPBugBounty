@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.owasp.html.HtmlPolicyBuilder;
 
-public class HelloWorld extends HttpServlet { 
+public class SanitizeAction extends HttpServlet { 
   private static final long serialVersionUID = 1L;
 
  /**

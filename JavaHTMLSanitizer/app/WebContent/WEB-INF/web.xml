@@ -9,12 +9,22 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-   <servlet>
-    <servlet-name>Hello</servlet-name>
-    <servlet-class>HelloWorld</servlet-class>
+  
+  <servlet>
+    <servlet-name>Sanitize</servlet-name>
+    <servlet-class>SanitizeAction</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Encode</servlet-name>
+    <servlet-class>EncodeAction</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
-    <servlet-name>Hello</servlet-name>
-    <url-pattern>/HelloServlet</url-pattern>
+    <servlet-name>Sanitize</servlet-name>
+    <url-pattern>/SanitizeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Encode</servlet-name>
+    <url-pattern>/EncodeServlet</url-pattern>
   </servlet-mapping>
 </web-app>
