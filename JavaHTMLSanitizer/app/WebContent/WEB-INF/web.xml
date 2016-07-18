@@ -9,7 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <servlet-name>Sanitize</servlet-name>
     <servlet-class>SanitizeAction</servlet-class>
@@ -18,7 +17,6 @@
     <servlet-name>Encode</servlet-name>
     <servlet-class>EncodeAction</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>Sanitize</servlet-name>
     <url-pattern>/SanitizeServlet</url-pattern>
