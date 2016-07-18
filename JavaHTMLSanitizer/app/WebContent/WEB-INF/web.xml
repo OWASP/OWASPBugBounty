@@ -13,16 +13,8 @@
     <servlet-name>Sanitize</servlet-name>
     <servlet-class>SanitizeAction</servlet-class>
   </servlet>
-  <servlet>
-    <servlet-name>Encode</servlet-name>
-    <servlet-class>EncodeAction</servlet-class>
-  </servlet>
   <servlet-mapping>
     <servlet-name>Sanitize</servlet-name>
     <url-pattern>/SanitizeServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Encode</servlet-name>
-    <url-pattern>/EncodeServlet</url-pattern>
   </servlet-mapping>
 </web-app>

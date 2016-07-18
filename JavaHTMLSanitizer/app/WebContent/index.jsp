@@ -15,42 +15,34 @@
 			We have also enabled "allowStyling" so you can test against our new CSS sanitization.<br/>
             Good luck!<br/><br/>
 			<textarea rows="10" cols="80" name="usercontent"></textarea><br/>
-			<input type="submit" value="submit">						
+			<input type="submit" value="submit">	
+			<hr>
+			<h1>Policy in use</h1>
+	  org.owasp.html.PolicyFactory sanitizer = new HtmlPolicyBuilder()<br/>
+      .allowStandardUrlProtocols()<br/>
+      // Allow title=&quot;...&quot; on any element.<br/>
+      .allowAttributes(&quot;title&quot;).globally()<br/>
+      // Allow href=&quot;...&quot; on &lt;a&gt; elements.<br/>
+      .allowAttributes(&quot;href&quot;).onElements(&quot;a&quot;)<br/>
+      // Defeat link spammers.<br/>
+      .requireRelNofollowOnLinks()<br/>
+      // Allow lang= with an alphabetic value on any element.<br/>
+      .allowAttributes(&quot;lang&quot;).matching(Pattern.compile(&quot;[a-zA-Z]{2,20}&quot;))<br/>
+          .globally()<br/>
+      // The align attribute on &lt;p&gt; elements can have any value below.<br/>
+      .allowAttributes(&quot;align&quot;)<br/>
+          .matching(true, &quot;center&quot;, &quot;left&quot;, &quot;right&quot;, &quot;justify&quot;, &quot;char&quot;)<br/>
+          .onElements(&quot;p&quot;)<br/>
+      // These elements are allowed.<br/>
+      .allowElements(<br/>
+          &quot;a&quot;, &quot;p&quot;, &quot;div&quot;, &quot;i&quot;, &quot;b&quot;, &quot;em&quot;, &quot;blockquote&quot;, &quot;tt&quot;, &quot;strong&quot;,<br/>
+          &quot;br&quot;, &quot;ul&quot;, &quot;ol&quot;, &quot;li&quot;)<br/>
+      // Custom slashdot tags.<br/>
+      // These could be rewritten in the sanitizer using an ElementPolicy.<br/>
+      .allowElements(&quot;quote&quot;, &quot;ecode&quot;)<br/>
+      // Allows for tests against new CSS sanitization<br/>
+      .allowStyling()<br/>
+      .toFactory();	<br/>
 		</form>	
-		<hr/>
-		<h1>OWASP Java Encoder Test</h1>
-		<form action="EncodeServlet" method="POST">
-		&lt;!DOCTYPE html&gt;<br/>
-		&lt;html&gt;<br/>
-		&lt;head&gt;<br/>
-		&lt;title&gt;<input type="text" name="title_input" size="30" value=""/>&lt;/title&gt;<br/>
-		&lt;/head&gt;<br/>
-		&lt;body&gt;<br/>
-		&lt;h1&gt;<input type="text" name="h1_input" size="30" value=""/>&lt;/h1&gt;<br/><br/>
-		&lt;form&gt;<br/>
-		&lt;textarea&gt;<br/><textarea rows="3" cols="80" name="textarea_input"></textarea><br/>&lt;/textarea&gt;<br/>
-		&lt;input type=&quot;text&quot; name=&quot;address&quot; value=&quot;<input type="text" name="attribute_input" size="30" value=""/>&quot; /&gt;<br/>
-		&lt;/form&gt;<br/><br/>
-		&lt;div style=&quot;width:&nbsp;<input type="text" name="csswidth_input" size="30" value=""/>; height: 200px; border: 1px solid black;&quot;&gt;Style1&lt;/div&gt;<br/>
-		&lt;div style=&quot;background-image: url(<input type="text" name="cssbackground_input" size="30" value=""/>); height: 200px; width: 400px; border: 1px solid black;&quot;&gt;Style2&lt;/div&gt;<br/><br/>
-		&lt;/body&gt;<br/>
-		&lt;/html&gt;<br/>
-		<input type="submit" value="submit">
-		</form>
-		<h2>After submitting this form, here is the expected output:</h2>
-		&quot;&lt;!DOCTYPE html&gt;&quot;+<br/>
-		&quot;&lt;html&gt;&lt;head&gt;\n&quot; + <br/>
-		&quot;&lt;title&gt;&quot; + Encode.forHtml(title) + &quot;&lt;/title&gt;\n&quot; +<br/>
-		&quot;&lt;/head&gt;\n&quot; +<br/>
-		&quot;&lt;body&gt;&lt;h2&gt;Results (Go back to try again!)&lt;/h2&gt;&lt;hr&gt;&lt;br/&gt;\n&quot; +<br/>
-		&quot;&lt;h1&gt;&quot; + Encode.forHtml(h1) + &quot;&lt;/h1&gt;\n&quot; +<br/>
-		&quot;&lt;form&gt;&quot; + <br/>
-		&quot;&lt;textarea&gt;&quot; + Encode.forHtmlContent(textarea) + &quot;&lt;/textarea&gt;&lt;br/&gt;\n&quot; +<br/>
-		&quot;&lt;input type=\&quot;text\&quot; name=\&quot;address\&quot; value=\&quot;&quot; + Encode.forHtmlAttribute(attribute) + &quot;\&quot; /&gt;&lt;br/&gt;\n&quot; +<br/>
-		&quot;&lt;/form&gt;\n&quot; + 	  <br/>
-		&quot;&lt;div style=\&quot;width: &quot; + Encode.forCssString(csswidth) + &quot;; height: 200px; border: 1px solid black;\&quot;&gt;Style1&lt;/div&gt;\n&quot; +<br/>
-		&quot;&lt;div style=\&quot;background-image: url(&quot; + Encode.forCssUrl(cssbackground) + &quot;); height: 200px; width: 400px; border: 1px solid black;\&quot;&gt;Style2&lt;/div&gt;\n&quot; + <br/>
-		&quot;&lt;/body&gt;\n&quot; +<br/>
-		&quot;&lt;/html&gt;&quot;
 	</body>	
 </html>
