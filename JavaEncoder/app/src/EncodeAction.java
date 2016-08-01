@@ -37,6 +37,8 @@ protected void doPost(HttpServletRequest request,
 	  String csswidth = request.getParameter("csswidth_input");
 	  String cssbackground = request.getParameter("cssbackground_input");
 
+	  String javascript = request.getParameter("javascript_input");
+	  
 	  PrintWriter out = response.getWriter();
 	  out.println (
 		  "<!DOCTYPE html>"+
@@ -50,7 +52,8 @@ protected void doPost(HttpServletRequest request,
 		  "<input type=\"text\" name=\"address\" value=\"" + Encode.forHtmlAttribute(attribute) + "\" /><br/>\n" +
 		  "</form>\n" + 	  
 		  "<div style=\"width: " + Encode.forCssString(csswidth) + "; height: 200px; border: 1px solid black;\">Style1</div>\n" +
-		  "<div style=\"background-image: url(" + Encode.forCssUrl(cssbackground) + "); height: 200px; width: 400px; border: 1px solid black;\">Style2</div>\n" + 
+		  "<div style=\"background-image: url(" + Encode.forCssUrl(cssbackground) + "); height: 200px; width: 400px; border: 1px solid black;\">Style2</div>\n" +   
+		  "<script type=\"text/javascript\">\nvar msg = \"" + Encode.forJavaScript(javascript) + "\";\n</script>\n" +
 		  "</body>\n" +
 		  "</html>"
 	 );  

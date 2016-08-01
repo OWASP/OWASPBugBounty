@@ -22,6 +22,9 @@
 		&lt;/form&gt;<br/><br/>
 		&lt;div style=&quot;width:&nbsp;<input type="text" name="csswidth_input" size="30" value=""/>; height: 200px; border: 1px solid black;&quot;&gt;Style1&lt;/div&gt;<br/>
 		&lt;div style=&quot;background-image: url(<input type="text" name="cssbackground_input" size="30" value=""/>); height: 200px; width: 400px; border: 1px solid black;&quot;&gt;Style2&lt;/div&gt;<br/><br/>
+		&lt;script type=&quot;text/javascript"&gt;<br/>
+		var msg = &quot;<input type="text" name="javascript_input" size="30" value=""/>&quot;;<br/>
+		&lt;/script&gt;<br/><br/>
 		&lt;/body&gt;<br/>
 		&lt;/html&gt;<br/>
 		<input type="submit" value="submit">
@@ -39,6 +42,7 @@
 		&quot;&lt;/form&gt;\n&quot; + 	  <br/>
 		&quot;&lt;div style=\&quot;width: &quot; + Encode.forCssString(csswidth) + &quot;; height: 200px; border: 1px solid black;\&quot;&gt;Style1&lt;/div&gt;\n&quot; +<br/>
 		&quot;&lt;div style=\&quot;background-image: url(&quot; + Encode.forCssUrl(cssbackground) + &quot;); height: 200px; width: 400px; border: 1px solid black;\&quot;&gt;Style2&lt;/div&gt;\n&quot; + <br/>
+		&quot;&lt;script type=\&quot;text/javascript\&quot;&gt;\nvar msg = \&quot;&quot; + Encode.forJavaScript(javascript) + &quot;\&quot;;\n&lt;/script&gt;\n&quot; +
 		&quot;&lt;/body&gt;\n&quot; +<br/>
 		&quot;&lt;/html&gt;&quot;
 	</body>	
