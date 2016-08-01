@@ -7,7 +7,7 @@
 		<title>OWASP XSS Tests</title>
 	</head>	
 	<body>		
-		<h1>OWASP HTML Sanitizer Test</h1>
+		<h1><a href="https://github.com/OWASP/java-html-sanitizer">OWASP HTML Sanitizer</a> <a href="https://github.com/OWASP/OWASPBugBounty/tree/master/JavaHTMLSanitizer">Test</a></h1>
 		<form action="SanitizeServlet" method="POST">			
 			<b>Please enter some HTML and try to XSS the server-side sanitizer!</b><br/><br/>
 			The current server-side policy allows the following tags ("a", "p", "div", "i", "b", "em",<br/>
