@@ -28,11 +28,31 @@ public class SanitizeAction extends HttpServlet {
   {
     // building a policy described in https://www.owasp.org/index.php/OWASP_Java_HTML_Sanitizer_Project#tab=Creating_a_HTML_Policy
 	  org.owasp.html.PolicyFactory sanitizer = new HtmlPolicyBuilder()
-          // These elements are allowed.
-          .allowElements(
-              "span", "div")
-          .toFactory();
-
+		.allowStandardUrlProtocols()
+		// Allow title="..." on any element.
+		.allowAttributes("title").globally()
+		// Allow href="..." on <a> elements.
+		.allowAttributes("href").onElements("a")
+		// Defeat link spammers.
+		.requireRelNofollowOnLinks()
+		// Allow lang= with an alphabetic value on any element.
+		.allowAttributes("lang").matching(Pattern.compile("[a-zA-Z]{2,20}"))
+		.globally()
+		// The align attribute on <p> elements can have any value below.
+		.allowAttributes("align")
+		.matching(true, "center", "left", "right", "justify", "char")
+		.onElements("p")
+		// These elements are allowed.
+		.allowElements(
+		"a", "p", "div", "i", "b", "em", "blockquote", "tt", "strong",
+		"br", "ul", "ol", "li")
+		// Custom slashdot tags.
+		// These could be rewritten in the sanitizer using an ElementPolicy.
+		.allowElements("quote", "ecode")
+		// Allows for tests against new CSS sanitization
+		.allowStyling()
+		.toFactory();	
+	  
     //accepting user content and converting nulls to empty strings
     String usercontent = request.getParameter("usercontent");
     if (usercontent == null) usercontent = "";  
